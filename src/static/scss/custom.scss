@@ -1,0 +1,23 @@
+// 1 a 5: Nucleo e Ferramentas
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+@import "vendor/bootstrap/variables-dark";
+@import "vendor/bootstrap/maps";
+@import "vendor/bootstrap/mixins";
+@import "vendor/bootstrap/root";
+
+// 6: Base e Layout
+@import "vendor/bootstrap/utilities";
+@import "vendor/bootstrap/reboot";
+@import "vendor/bootstrap/type";
+@import "vendor/bootstrap/containers";
+@import "vendor/bootstrap/grid";
+@import "vendor/bootstrap/helpers";
+
+// COMPONENTES ADICIONAIS (Para nao ficar so no esqueleto)
+@import "vendor/bootstrap/buttons";
+@import "vendor/bootstrap/navbar";
+@import "vendor/bootstrap/forms";
+
+// 7: Gerador de Classes de Utilidade (Obrigatòrio por ùltimo)
+@import "vendor/bootstrap/utilities/api";
