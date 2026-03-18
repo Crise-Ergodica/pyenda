@@ -1,0 +1,29 @@
+# Ambientes Virtuais e Gerenciadores de Pacote
+.venv/
+env/
+venv/
+poetry.lock
+
+# Artefatos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Artefatos do Django
+db.sqlite3
+*.log
+local_settings.py
+
+# Variáveis de Ambiente (Segurança)
+.env
+
+# Artefatos de Front-end (Gerados pelo Sass)
+# Descomente as linhas abaixo se preferir compilar o CSS no servidor de produção
+# src/static/css/custom.css
+# src/static/css/custom.css.map
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
