@@ -1,0 +1,24 @@
+{# src/componentes/templates/componentes/card.html #}
+{# Estrutura base do Card Bootstrap 5 com suporte a classes e estilos dinâmicos #}
+<div class="card {{ extra_class }}" style="{{ style }}">
+  
+  {# Renderiza a imagem de topo apenas se a URL for fornecida #}
+  {% if card_img_top %}
+    <img src="{{ card_img_top }}" class="card-img-top" alt="{{ alt }}">
+  {% endif %}
+  
+  <div class="card-body">
+    {# Uso do filtro 'safe' permite injeção controlada de HTML (ex: <b>, <i>) #}
+    {% if card_title %}<h5 class="card-title">{{ card_title|safe }}</h5>{% endif %}
+    {% if card_subtitle %}<h6 class="card-subtitle mb-2 text-muted">{{ card_subtitle|safe }}</h6>{% endif %}
+    {% if card_text %}<p class="card-text">{{ card_text|safe }}</p>{% endif %}
+
+    {# Itera sobre a lista de links, providenciando fallbacks seguros (default) #}
+    {% for link in links %}
+      <a href="{{ link.url|default:'#' }}" 
+         class="{{ link.class|default:'card-link' }}">
+         {{ link.text }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
